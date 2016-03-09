@@ -15,5 +15,5 @@ docker build -t jpchateau/docker-murmur .
 
 ```bash
 mkdir /home/$USER/murmur
-sudo docker run -d -p 64738:64738 -p 64738:64738/udp -v /home/$USER/murmur:/data jpchateau/docker-murmur
+docker run -d -p 64738:64738 -p 64738:64738/udp -v /home/$USER/murmur:/data jpchateau/docker-murmur
 ```
