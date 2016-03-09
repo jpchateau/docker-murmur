@@ -4,6 +4,9 @@ MAINTAINER Jean-Philippe Chateau "contact@jpchateau.com"
 # Murmur version
 ENV version=1.2.15
 
+# Make sure we don't get notifications we can't answer during building
+ENV DEBIAN_FRONTEND noninteractive
+
 VOLUME ["/data"]
 
 # Forward apporpriate ports
@@ -11,6 +14,7 @@ EXPOSE 64738/tcp 64738/udp
 
 # Download and install the required packages
 RUN apt-get update \
+	&& apt-get install apt-utils -y \
     && apt-get install wget -y \
     && apt-get install bzip2 -y 
 
@@ -21,7 +25,10 @@ RUN wget -O /murmur.tar.bz2 https://github.com/mumble-voip/mumble/releases/downl
     && mv /murmur-static_x86-${version} /murmur \
     && rm /murmur.tar
 
-#COPY ./Resources/murmur.ini /etc/murmur.ini
+COPY ./Resources/murmur.ini /murmur.ini.sample
+COPY ./Resources/start.sh /start
 
-ENTRYPOINT ["/murmur/murmur.x86", "-fg", "-v"]
-#CMD ["-ini", "/etc/murmur.ini"]
+# Fix all permissions
+RUN chmod +x /start
+
+CMD ["/start"]
