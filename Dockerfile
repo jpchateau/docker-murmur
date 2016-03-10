@@ -14,7 +14,7 @@ EXPOSE 64738/tcp 64738/udp
 
 # Download and install the required packages
 RUN apt-get update \
-	&& apt-get install apt-utils -y \
+    && apt-get install apt-utils -y \
     && apt-get install wget -y \
     && apt-get install bzip2 -y 
 
