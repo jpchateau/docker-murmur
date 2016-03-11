@@ -24,3 +24,5 @@ docker build -t jpchateau/murmur .
 mkdir ~/murmur
 docker run -d --name murmur -p 64738:64738 -p 64738:64738/udp -v ~/murmur:/data jpchateau/murmur
 ```
+
+The mounted volume contains your server data (configuration and logs).
