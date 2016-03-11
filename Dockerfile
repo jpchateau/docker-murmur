@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM debian:jessie
 MAINTAINER Jean-Philippe Chateau "contact@jpchateau.com"
 
 # Murmur version
