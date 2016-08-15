@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Jean-Philippe Chateau "contact@jpchateau.com"
 
 # Murmur version
-ENV version=1.2.15
+ENV version=1.2.16
 
 # Make sure we don't get notifications we can't answer during building
 ENV DEBIAN_FRONTEND noninteractive
@@ -16,7 +16,7 @@ EXPOSE 64738/tcp 64738/udp
 RUN apt-get update \
     && apt-get install apt-utils -y \
     && apt-get install wget -y \
-    && apt-get install bzip2 -y 
+    && apt-get install bzip2 -y
 
 # Download and install murmur
 RUN wget -O /murmur.tar.bz2 https://github.com/mumble-voip/mumble/releases/download/${version}/murmur-static_x86-${version}.tar.bz2 \

@@ -4,7 +4,8 @@ Murmur is a VoIP server for Mumble.
 
 ## About this image
 
-This image intends to be stable and light. That's why it is based on the latest stable debian release.
+This image intends to be stable and light.  
+It is based on the latest stable debian release.
 
 ### Build
 
