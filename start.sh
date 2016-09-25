@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 if [ ! -f /data/murmur.log ]
 then
     touch /data/murmur.log
