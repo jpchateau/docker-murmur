@@ -27,18 +27,19 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Download and install the required packages
 RUN set -x \
-    apt-get update \
+    && apt-get update \
     && apt-get install apt-utils -y \
     && apt-get install wget -y \
     && apt-get install bzip2 -y
 
 # Download and install murmur
 RUN set -x \
-    wget -O /murmur.tar.bz2 $MURMUR_BASE_REPOSITORY/$MURMUR_VERSION/murmur-static_x86-$MURMUR_VERSION.tar.bz2 \
+    && wget -O /murmur.tar.bz2 $MURMUR_BASE_REPOSITORY/$MURMUR_VERSION/murmur-static_x86-$MURMUR_VERSION.tar.bz2 \
     && bzip2 -d /murmur.tar.bz2 \
     && tar -xvf /murmur.tar \
     && mv /murmur-static_x86-$MURMUR_VERSION /murmur \
-    && rm /murmur.tar
+    && rm /murmur.tar \
+    && apt-get purge -y --auto-remove wget bzip2
 
 COPY ./config/murmur.ini /murmur.ini.sample
 
