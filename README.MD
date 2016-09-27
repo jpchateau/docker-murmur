@@ -1,6 +1,6 @@
 # Docker-Murmur
 
-[![](https://images.microbadger.com/badges/version/jpchateau/murmur.svg)](https://microbadger.com/images/jpchateau/murmur "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/jpchateau/murmur.svg)](https://microbadger.com/images/jpchateau/murmur "Get your own image badge on microbadger.com")
+[![Build Status](https://travis-ci.org/jpchateau/docker-murmur.svg?branch=master)](https://travis-ci.org/jpchateau/docker-murmur) [![](https://images.microbadger.com/badges/version/jpchateau/murmur.svg)](https://microbadger.com/images/jpchateau/murmur "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/jpchateau/murmur.svg)](https://microbadger.com/images/jpchateau/murmur "Get your own image badge on microbadger.com")
 
 ## About Murmur
 
