@@ -1,7 +1,8 @@
 FROM debian:jessie
+
 MAINTAINER Jean-Philippe Chateau "contact@jpchateau.com"
 
-# grab gosu for easy step-down from root
+# Grab gosu for easy step-down from root
 ENV GOSU_VERSION 1.9
 RUN set -x \
     && apt-get update && apt-get install -y --no-install-recommends ca-certificates wget && rm -rf /var/lib/apt/lists/* \
@@ -52,4 +53,5 @@ COPY docker-entrypoint.sh /
 COPY start.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
+
 CMD ["/start.sh"]
