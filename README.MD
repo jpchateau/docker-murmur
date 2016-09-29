@@ -1,6 +1,6 @@
 # Docker-Murmur
 
-[![@jpchateau on Twitter](http://img.shields.io/badge/twitter-%40jpchateau-blue.svg?style=flat)](https://twitter.com/jpchateau) [![Build Status](https://travis-ci.org/jpchateau/docker-murmur.svg?branch=master)](https://travis-ci.org/jpchateau/docker-murmur) [![](https://images.microbadger.com/badges/version/jpchateau/murmur.svg)](https://microbadger.com/images/jpchateau/murmur) [![](https://images.microbadger.com/badges/image/jpchateau/murmur.svg)](https://microbadger.com/images/jpchateau/murmur)
+[![@jpchateau on Twitter](http://img.shields.io/badge/twitter-%40jpchateau-blue.svg?style=flat)](https://twitter.com/jpchateau) [![Build Status](https://travis-ci.org/jpchateau/docker-murmur.svg?branch=master)](https://travis-ci.org/jpchateau/docker-murmur) [![](https://images.microbadger.com/badges/version/jpchateau/docker-murmur.svg)](https://microbadger.com/images/jpchateau/docker-murmur) [![](https://images.microbadger.com/badges/image/jpchateau/docker-murmur.svg)](https://microbadger.com/images/jpchateau/docker-murmur)
 
 Murmur is a VoIP server for Mumble.
 
