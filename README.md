@@ -2,7 +2,7 @@
 
 # Supported tags and respective `Dockerfile` links
 
-- [`1.2.17`, `latest` (*1.2/Dockerfile*)](https://github.com/jpchateau/docker-murmur/blob/master/1.2/Dockerfile)
+- [`1.2.17`, `1.2`, `latest` (*1.2/Dockerfile*)](https://github.com/jpchateau/docker-murmur/blob/master/1.2/Dockerfile)
 
 # About this image
 
