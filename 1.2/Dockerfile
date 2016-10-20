@@ -3,6 +3,7 @@ FROM debian:jessie
 MAINTAINER Jean-Philippe Chateau "contact@jpchateau.com"
 
 ENV GOSU_VERSION 1.9
+
 RUN set -x \
     && apt-get update && apt-get install -y --no-install-recommends ca-certificates wget && rm -rf /var/lib/apt/lists/* \
     && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
@@ -17,30 +18,22 @@ RUN set -x \
     && apt-get purge -y --auto-remove ca-certificates wget
 
 ENV MURMUR_VERSION 1.2.17
-ENV MURMUR_BASE_REPOSITORY https://github.com/mumble-voip/mumble/releases/download
+
+WORKDIR /tmp
 
 RUN set -x \
-    && apt-get update && apt-get install -y \
-        apt-utils \
-        wget \
-        bzip2 \
-    && rm -rf /var/lib/apt/lists/* \
-    && wget -O /murmur.tar.bz2 $MURMUR_BASE_REPOSITORY/$MURMUR_VERSION/murmur-static_x86-$MURMUR_VERSION.tar.bz2 \
-    && bzip2 -d /murmur.tar.bz2 \
-    && tar -xvf /murmur.tar \
-    && mv /murmur-static_x86-$MURMUR_VERSION /murmur \
-    && rm /murmur.tar \
-    && apt-get purge -y --auto-remove \
-        apt-utils \
-        wget \
-        bzip2
-
-COPY ./config/murmur.ini /murmur.ini.sample
+    && apt-get update && apt-get install -y apt-utils wget bzip2 && rm -rf /var/lib/apt/lists/* \
+    && wget -O murmur.tar.bz2 https://github.com/mumble-voip/mumble/releases/download/$MURMUR_VERSION/murmur-static_x86-$MURMUR_VERSION.tar.bz2 \
+    && tar -xvjf murmur.tar.bz2 \
+    && rm murmur.tar.bz2 \
+    && apt-get purge -y --auto-remove apt-utils wget bzip2 \
+    && mv murmur-static_x86-$MURMUR_VERSION murmur
 
 VOLUME ["/data"]
 
 EXPOSE 64738/tcp 64738/udp
 
+COPY config/murmur.ini murmur/murmur.ini.sample
 COPY docker-entrypoint.sh /
 COPY start.sh /
 
