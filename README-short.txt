@@ -1,1 +1,0 @@
-Murmur is the server component for Mumble, an open source VoIP solution.
