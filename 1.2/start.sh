@@ -9,7 +9,7 @@ fi
 
 if [ ! -f /data/murmur.ini ]
 then
-    cp murmur/murmur.ini.sample /data/murmur.ini
+    cp murmur.ini.sample /data/murmur.ini
 fi
 
-./murmur/murmur.x86 -fg -v -ini /data/murmur.ini
+./murmur.x86 -fg -v -ini /data/murmur.ini
