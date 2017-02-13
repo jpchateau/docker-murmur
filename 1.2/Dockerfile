@@ -2,7 +2,7 @@ FROM debian:jessie
 
 MAINTAINER Jean-Philippe Chateau "contact@jpchateau.com"
 
-ENV MURMUR_VERSION 1.2.17
+ENV MURMUR_VERSION 1.2.19
 
 VOLUME ["/data"]
 

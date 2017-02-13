@@ -200,4 +200,4 @@ Ice.MessageSizeMax=65536
 
 allowping=true
 timeout=30
-suggestVersion=1.2.17
+suggestVersion=1.2.19

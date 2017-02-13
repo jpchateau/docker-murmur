@@ -2,7 +2,7 @@
 
 # Supported tags and respective `Dockerfile` links
 
-- [`1.2.17`, `1.2`, `latest` (*1.2/Dockerfile*)](https://github.com/jpchateau/docker-murmur/blob/master/1.2/Dockerfile)
+- [`1.2.19`, `1.2`, `latest` (*1.2/Dockerfile*)](https://github.com/jpchateau/docker-murmur/blob/master/1.2/Dockerfile)
 
 # About this image
 
@@ -10,7 +10,7 @@ This image intends to be stable and light.
 It is based on the latest stable debian release.
 It provides additional configuration.
 
-* [Mumble 1.2.17](https://wiki.mumble.info/wiki/Main_Page)
+* [Mumble 1.2.19](https://wiki.mumble.info/wiki/Main_Page)
 
 ## Build
 
@@ -35,4 +35,4 @@ The mounted volume contains your server data (configuration and logs).
 
 # Changelog
 
-See the original changelog here: http://blog.mumble.info/mumble-1-2-17
+See the original changelog here: http://blog.mumble.info/mumble-1-2-19
